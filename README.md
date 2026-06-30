@@ -97,3 +97,7 @@ Este repositorio busca evaluar, para una misma funcionalidad (obtención de coor
 
 - **Proyectos Flutter:** Flutter SDK instalado (`flutter doctor` sin errores), permisos de ubicación configurados en Android (`ACCESS_FINE_LOCATION`) e iOS (`NSLocationWhenInUseUsageDescription`).
 - **Proyectos Ionic:** Node.js, Ionic CLI (`npm install -g @ionic/cli`) y, para probar el GPS en dispositivo/emulador, el plugin `@capacitor/geolocation` (pendiente de agregar) junto con Capacitor configurado (`npx cap add android` / `npx cap add ios`).
+
+
+Video en redes sociales 
+https://vt.tiktok.com/ZSC5c2oJp/ 
