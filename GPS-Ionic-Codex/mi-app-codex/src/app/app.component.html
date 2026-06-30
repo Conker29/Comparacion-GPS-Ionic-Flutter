@@ -1,0 +1,35 @@
+<ion-app>
+  <ion-content class="ion-padding">
+    <div class="app-shell">
+      <div class="hero-card">
+        <h1>GPS Personalizado</h1>
+        <p>Tu ubicación en tiempo real, con una experiencia visual más moderna.</p>
+      </div>
+
+      <ion-card class="info-card">
+        <ion-card-header>
+          <ion-card-title>Estado del GPS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="status">{{ statusText }}</p>
+          <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+          <div class="location" *ngIf="position; else noLocation">
+            <p><strong>Latitud:</strong> {{ position.latitude | number:'1.6-6' }}</p>
+            <p><strong>Longitud:</strong> {{ position.longitude | number:'1.6-6' }}</p>
+            <p><strong>Precisión:</strong> {{ position.accuracy | number:'1.0-0' }} m</p>
+            <p><strong>Última actualización:</strong> {{ position.timestamp }}</p>
+          </div>
+
+          <ng-template #noLocation>
+            <p class="placeholder">Aún no hay coordenadas disponibles.</p>
+          </ng-template>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-button expand="block" class="action-button" (click)="watching ? stopTracking() : startTracking()">
+        {{ watching ? 'Detener seguimiento' : 'Iniciar seguimiento' }}
+      </ion-button>
+    </div>
+  </ion-content>
+</ion-app>

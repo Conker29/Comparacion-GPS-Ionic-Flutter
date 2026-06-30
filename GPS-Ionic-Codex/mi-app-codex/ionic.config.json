@@ -1,0 +1,7 @@
+{
+  "name": "mi-app-codex",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
